@@ -12,7 +12,7 @@ text_area.pack(fill="both", expand=True)
 current_font = "Arial"
 current_size = 12
 
-def open_file():
+def open_file():    
     file_path = filedialog.askopenfilename(filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
     if file_path:
         with open(file_path, "r", encoding="utf-8") as file:
