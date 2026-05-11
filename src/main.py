@@ -3,7 +3,7 @@ from tkinter import filedialog, font
 
 root = tk.Tk()
 root.title("Простой редактор")
-root.geometry("800x600")
+root.geometry("900x700")
 root.configure(bg="white")
 
 text_area = tk.Text(root, wrap="word", bg="white", fg="black", font=("Arial", 12))
@@ -36,15 +36,16 @@ def change_size(s):
     current_size = s
     text_area.configure(font=(current_font, current_size))
 
+# ==================== Меню ====================
 menubar = tk.Menu(root)
 root.config(menu=menubar)
 
 file_menu = tk.Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Файл", menu=file_menu)
-file_menu.add_command(label="Открыть", command=open_file)
-file_menu.add_command(label="Сохранить", command=save_file)
+file_menu.add_command(label="Открыть", command=open_file, accelerator="Ctrl+O")
+file_menu.add_command(label="Сохранить", command=save_file, accelerator="Ctrl+S")
 file_menu.add_separator()
-file_menu.add_command(label="Выход", command=root.quit)
+file_menu.add_command(label="Выход", command=root.quit, accelerator="Ctrl+Q")
 
 edit_menu = tk.Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Редактор", menu=edit_menu)
@@ -60,5 +61,10 @@ size_menu = tk.Menu(edit_menu, tearoff=0)
 edit_menu.add_cascade(label="Размер", menu=size_menu)
 for sz in [8, 10, 12, 14, 16, 18, 20, 24, 28, 32]:
     size_menu.add_command(label=str(sz), command=lambda s=sz: change_size(s))
+
+# ==================== Горячие клавиши ====================
+root.bind("<Control-o>", lambda event: open_file())
+root.bind("<Control-s>", lambda event: save_file())
+root.bind("<Control-q>", lambda event: root.quit())
 
 root.mainloop()
