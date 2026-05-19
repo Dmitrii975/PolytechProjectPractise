@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект по приоритизации заявок</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <a href="#" class="nav-logo" onclick="return showPage('home')">Проект <span>по приоритизации</span></a>
+    <ul class="nav-links">
+        <li><a href="#" id="nav-home" class="active" onclick="return showPage('home')">Главная</a></li>
+        <li><a href="#" id="nav-about" onclick="return showPage('about')">О проекте</a></li>
+        <li><a href="#" id="nav-team" onclick="return showPage('team')">Участники</a></li>
+        <li><a href="#" id="nav-journal" onclick="return showPage('journal')">Журнал</a></li>
+        <li><a href="#" id="nav-resources" onclick="return showPage('resources')">Ресурсы</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="page-home" class="page active">
+        <div class="hero">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Проектная деятельность · МОСИТЛАБ</div>
+                <h1>Интеллектуальная система приоритизации клиентских заявок</h1>
+                <p class="hero-sub">Автоматическое ранжирование входящих заказов на базе машинного обучения. Фокус на выгодных сделках, сокращение потерь рабочего времени в 5–12 раз.</p>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-num">3×</span><span class="stat-label">Рост маржинального дохода</span></div>
+                    <div class="stat"><span class="stat-num">85%</span><span class="stat-label">Сокращение «холостой» работы</span></div>
+                    <div class="stat"><span class="stat-num">12×</span><span class="stat-label">Ускорение квалификации</span></div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" onclick="return showPage('about')">Подробнее о проекте →</a>
+                    <a href="#" class="btn btn-ghost" onclick="return showPage('journal')">Журнал прогресса</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="cards" style="grid-template-columns: repeat(3, 1fr); align-items: center; text-align: center;">
+                <div class="card">
+                    <div class="card-icon">📥</div>
+                    <div class="card-title">Входящая заявка</div>
+                    <div class="card-text">Клиент · Продукт · Срок · Бюджет</div>
+                </div>
+                <div style="font-size: 1.5rem; color: var(--text3);">→</div>
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <div class="card-title">AI-модуль</div>
+                    <div class="card-text">Маржинальность · Вероятность · История клиента</div>
+                </div>
+                <div style="font-size: 1.5rem; color: var(--text3);">→</div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">Score: 2.8 / 3.0</div>
+                    <div class="card-text">HIGH → Срочно<br>MEDIUM → Плановый<br>LOW → Отложить</div>
+                </div>
+            </div>
+        </div>
+        <hr class="fancy">
+        <div class="section">
+            <div class="problem-grid">
+                <div>
+                    <div class="section-label">Проблема</div>
+                    <div class="section-title">Почему это важно?</div>
+                    <p class="section-sub">Без системы приоритизации компания теряет огромные ресурсы на заявки, которые никогда не станут сделками.</p>
+                    <div class="big-number">85%</div>
+                    <p style="color:var(--text2); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">рабочего времени ведущих специалистов уходит на обработку заявок, которые никогда не конвертируются в продажи. Каждая заявка требует полной конструкторско-технологической проработки.</p>
+                    <div class="highlight-box">
+                        <p>Только 10–15% из всех входящих заявок переходят в реальные сделки. Без приоритизации специалисты не знают, какие заказы обрабатывать в первую очередь.</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card"><div class="card-icon">⚡</div><div class="card-title">5–12× ускорение</div><div class="card-text">Сокращение времени первичной квалификации заявки</div></div>
+                    <div class="card"><div class="card-icon">📈</div><div class="card-title">3× рост дохода</div><div class="card-text">Подтверждён симуляцией Монте-Карло</div></div>
+                    <div class="card"><div class="card-icon">🎯</div><div class="card-title">Точность ML</div><div class="card-text">Оценка по десяткам факторов одновременно</div></div>
+                    <div class="card"><div class="card-icon">🔗</div><div class="card-title">Интеграция</div><div class="card-text">API подключение к существующим ИТ-системам</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-about" class="page">
+        <div class="section">
+            <div class="section-label">О проекте</div>
+            <div class="section-title">Разработка информационной системы приоритизации клиентских заявок</div>
+            <p class="section-sub">Проект реализован для индустриального партнёра ООО «МОСИТЛАБ» в рамках проектной деятельности.</p>
+            
+            <div class="section-label" style="margin-top:2rem;">Архитектура системы</div>
+            <div class="arch-diagram">
+                <div class="arch-box"><strong>CRM / ERP</strong><span>Источники данных<br>Заявки, Клиенты, История</span></div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-box"><strong>API Gateway</strong><span>REST API<br>Авторизация, Маршрутизация</span></div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-box"><strong>ML Engine</strong><span>XGBoost / Random Forest<br>Скоринг 0–3, SHAP</span></div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-box"><strong>Web Dashboard</strong><span>Интерфейс менеджера<br>Аналитика, Трассировка</span></div>
+            </div>
+
+            <div class="timeline">
+                <div class="tl-item"><div class="tl-num">Этап 01</div><div class="tl-title">Анализ и сбор данных</div><div class="tl-text">Глубокий анализ бизнес-процессов «as-is» в МОСИТЛАБ. Получены реальные исторические данные о заказах для обучения модели. Разработана схема предварительной обработки и обогащения заявок. Проведено более 15 интервью с ключевыми специалистами компании.</div></div>
+                <div class="tl-item"><div class="tl-num">Этап 02</div><div class="tl-title">Разработка AI-модели ранжирования</div><div class="tl-text">Создан и протестирован MVP AI-модели на базе градиентного бустинга. Модель оценивает перспективность каждой заявки по десяткам факторов: маржинальность, вероятность закрытия, сложность исполнения, история клиента. Результат — приоритет High / Medium / Low с объяснимостью решений.</div></div>
+                <div class="tl-item"><div class="tl-num">Этап 03</div><div class="tl-title">Backend и интеграционная архитектура</div><div class="tl-text">Реализована серверная часть, REST API, механизмы автоматической загрузки заявок из существующих систем заказчика (CRM, 1C ERP) и расчёта приоритетов в реальном времени. Система работает в асинхронном режиме с гарантией доставки результатов.</div></div>
+                <div class="tl-item"><div class="tl-num">Этап 04</div><div class="tl-title">Веб-интерфейс и тестирование</div><div class="tl-text">Создан удобный дашборд для работы с приоритетами, реализована полная трассировка решений. Проведено end-to-end тестирование на реальных данных. Симуляция Монте-Карло подтвердила значительный рост маржинального дохода — до 3× по оптимистичному сценарию.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-team" class="page">
+        <div class="section">
+            <div class="section-label">Команда проекта</div>
+            <div class="section-title">Участники и их вклад</div>
+            <p class="section-sub">Проект реализован командой из 9 студентов под руководством куратора.</p>
+            
+            <div class="leader-section">
+                <div class="team-card" style="border-color: var(--accent);">
+                    <div class="avatar">НЯ</div>
+                    <div class="team-name">Никулин Ярослав Владимирович</div>
+                    <div class="team-group">Куратор проекта</div>
+                    <div class="team-role">Научный руководитель</div>
+                    <div class="team-contrib">Общее руководство проектом, экспертиза в области машинного обучения и бизнес-аналитики. Координация взаимодействия с индустриальным партнёром ООО «МОСИТЛАБ».</div>
+                </div>
+            </div>
+
+            <div class="section-label">Участники</div>
+            <div class="team-grid">
+                <div class="team-card"><div class="avatar">АР</div><div class="team-name">Ашрафулин Рамиль Русланович</div><div class="team-group">Группа 231-321</div><div class="team-role">🔬 Анализ данных</div><div class="team-contrib">Разработка системы признаков (фичей) для ML-модели. Предобработка исторических данных заказов, нормализация и очистка. Реализация pipeline трансформации данных для обучения и инференса.</div></div>
+                <div class="team-card"><div class="avatar">БД</div><div class="team-name">Бекмуратов Дилмурат Бекмуратович</div><div class="team-group">Группа 231-321</div><div class="team-role">🤖 ML-разработка</div><div class="team-contrib">Обучение и валидация модели классификации приоритетов. Подбор гиперпараметров, оценка качества предсказаний. Реализация механизма объяснимости решений на основе SHAP-значений.</div></div>
+                <div class="team-card"><div class="avatar">БЕ</div><div class="team-name">Блюдова Екатерина Викторовна</div><div class="team-group">Группа 251-334</div><div class="team-role">📋 Бизнес-аналитика</div><div class="team-contrib">Проведение интервью с сотрудниками МОСИТЛАБ, описание бизнес-процессов «as-is». Формирование технического задания, документирование функциональных и нефункциональных требований к системе.</div></div>
+                <div class="team-card"><div class="avatar">ВР</div><div class="team-name">Волков Роман Сергеевич</div><div class="team-group">Группа 231-323</div><div class="team-role">⚙️ Backend</div><div class="team-contrib">Реализация серверной части на Python/FastAPI. Разработка REST API для взаимодействия с фронтендом и ML-модулем. Настройка очередей задач и асинхронной обработки заявок.</div></div>
+                <div class="team-card"><div class="avatar">ГМ</div><div class="team-name">Гаджиагаев Магомедсаид Мамедович</div><div class="team-group">Группа 231-3213</div><div class="team-role">🔗 Интеграция</div><div class="team-contrib">Разработка коннекторов к CRM и 1C ERP заказчика. Реализация автоматической синхронизации заявок. Проектирование схемы базы данных и слоя хранения данных.</div></div>
+                <div class="team-card"><div class="avatar">ГД</div><div class="team-name">Горячко Дарья Романовна</div><div class="team-group">Группа 241-321</div><div class="team-role">🎨 UX/UI и веб</div><div class="team-contrib">Проектирование пользовательского интерфейса дашборда. Разработка прототипов и макетов в Figma. Реализация фронтенда с визуализацией приоритетов, фильтрацией и сортировкой заявок.</div></div>
+                <div class="team-card"><div class="avatar">ЗМ</div><div class="team-name">Зотов Михаил Павлович</div><div class="team-group">Группа 241-334</div><div class="team-role">📊 Эконом. моделирование</div><div class="team-contrib">Построение экономической модели и симуляции Монте-Карло. Расчёт ROI и оценка экономического эффекта от внедрения системы. Подготовка финансового раздела отчёта.</div></div>
+                <div class="team-card"><div class="avatar">КА</div><div class="team-name">Качалиев Аким Эдемович</div><div class="team-group">Группа 251-951</div><div class="team-role">🧪 Тестирование и QA</div><div class="team-contrib">Разработка тест-плана и написание автоматических тестов. Проведение end-to-end тестирования системы на реальных данных. Нагрузочное тестирование API и выявление узких мест производительности.</div></div>
+                <div class="team-card"><div class="avatar">КД</div><div class="team-name">Колесник Дмитрий Сергеевич</div><div class="team-group">Группа 251-333</div><div class="team-role">🤖 ML-инженер</div><div class="team-contrib">Написание технической документации, руководства пользователя и администратора. Настройка CI/CD pipeline, Docker-контейнеризация системы. Подготовка презентации финального отчёта.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-journal" class="page">
+        <div class="section">
+            <div class="section-label">Журнал прогресса</div>
+            <div class="section-title">История разработки</div>
+            <p class="section-sub">Ключевые события и достижения проекта в хронологическом порядке.</p>
+            <div class="posts">
+                <article class="post">
+                    <div class="post-body">
+                        <div class="post-meta"><span class="post-date">04 · ЭТАП IV</span><span class="tag">Финальный</span></div>
+                        <h3 class="post-title">Запущен веб-интерфейс и проведено комплексное тестирование</h3>
+                        <p class="post-text">Создан удобный дашборд для работы с приоритетами заявок. Интерфейс отображает распределение по уровням приоритета, детальную карточку каждой заявки с объяснением решения AI, тренды и аналитику. Реализована полная трассировка — менеджер видит, какие факторы повлияли на оценку. Проведено end-to-end тестирование на реальных данных МОСИТЛАБ. Симуляция Монте-Карло (10 000 итераций) подтвердила экономический эффект: рост маржинального дохода в 1.7–3.0× в зависимости от сценария. Система готова к пилотному внедрению.</p>
+                        <div style="margin-top:0.5rem; color:var(--text3); font-size:0.8rem;">✓ Готово к внедрению · Монте-Карло · 10 000 итераций</div>
+                    </div>
+                </article>
+                <article class="post">
+                    <div class="post-body">
+                        <div class="post-meta"><span class="post-date">03 · ЭТАП III</span><span class="tag">Backend</span></div>
+                        <h3 class="post-title">Разработан backend и интеграционная архитектура</h3>
+                        <p class="post-text">Реализована серверная часть на FastAPI (Python). Спроектированы и задокументированы REST API endpoints для управления заявками, получения приоритетов и доступа к аналитике. Настроена очередь задач на Celery + Redis для асинхронного расчёта приоритетов. Разработаны коннекторы для автоматической загрузки заявок из CRM и 1C ERP МОСИТЛАБ. Интеграция работает в режиме реального времени с polling-интервалом 5 минут. Вся инфраструктура упакована в Docker Compose для простого развёртывания.</p>
+                        <div style="margin-top:0.5rem; color:var(--text3); font-size:0.8rem;">FastAPI · Celery · Docker</div>
+                    </div>
+                </article>
+                <article class="post">
+                    <div class="post-body">
+                        <div class="post-meta"><span class="post-date">02 · ЭТАП II</span><span class="tag">Machine Learning</span></div>
+                        <h3 class="post-title">Внедрён алгоритм ранжирования на основе машинного обучения</h3>
+                        <p class="post-text">Создан и протестирован MVP AI-модели, которая оценивает перспективность каждой заявки по десяткам факторов и присваивает приоритет (HIGH / MEDIUM / LOW). Испытано несколько алгоритмов: Logistic Regression, Random Forest, XGBoost. По совокупности метрик (F1-score, ROC-AUC, скорость инференса) выбран XGBoost. Достигнута точность 81% на отложенной выборке. Внедрена объяснимость решений через SHAP-значения — специалист видит, почему заявке присвоен тот или иной приоритет.</p>
+                        <div style="margin-top:0.5rem; color:var(--text3); font-size:0.8rem;">XGBoost · F1=0.81 · AUC=0.87</div>
+                    </div>
+                </article>
+                <article class="post">
+                    <div class="post-body">
+                        <div class="post-meta"><span class="post-date">01 · ЭТАП I</span><span class="tag">Анализ</span></div>
+                        <h3 class="post-title">Добавлен модуль анализа и сбора данных</h3>
+                        <p class="post-text">Команда завершила глубокий анализ бизнес-процессов «as-is» в МОСИТЛАБ и получила реальные исторические данные о заказах для обучения модели. Проведено более 15 интервью с ключевыми специалистами компании — коммерческим директором, руководителями отделов и инженерами-конструкторами. Составлен реестр всех факторов, влияющих на успешность сделки. Разработана схема предварительной обработки и обогащения заявок: нормализация, обработка пропусков, кодирование категориальных переменных. Результаты задокументированы в виде Data Specification документа.</p>
+                        <div style="margin-top:0.5rem; color:var(--text3); font-size:0.8rem;">Завершено · 9 участников · 3 недели</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-resources" class="page">
+        <div class="section">
+            <div class="section-label">Ресурсы</div>
+            <div class="section-title">Полезные материалы</div>
+            <p class="section-sub">Ссылки на партнёра, академические статьи и инструменты, которые помогут глубже понять суть проекта.</p>
+            <div class="section-label" style="margin-top:1.5rem;">Индустриальный партнёр</div>
+            <div class="resources-grid">
+                <a href="https://mositlab.ru" class="res-card" target="_blank"><div class="res-type">🏢 Партнёр</div><div class="res-title">ООО «МОСИТЛАБ»</div><div class="res-desc">Индустриальный партнёр проекта. Производственная компания, специализирующаяся на разработке и изготовлении сложных технических изделий под заказ.</div><div class="res-link">mositlab.ru →</div></a>
+            </div>
+            <div class="section-label" style="margin-top:2rem;">Академические материалы</div>
+            <div class="resources-grid">
+                <a href="https://scikit-learn.org" class="res-card" target="_blank"><div class="res-type">Документация · ML</div><div class="res-title">Scikit-learn: Supervised Learning</div><div class="res-desc">Официальная документация по алгоритмам машинного обучения, использованным в проекте: Random Forest, Gradient Boosting, оценка качества моделей.</div><div class="res-link">scikit-learn.org →</div></a>
+                <a href="https://xgboost.readthedocs.io" class="res-card" target="_blank"><div class="res-type">Документация · ML</div><div class="res-title">XGBoost Documentation</div><div class="res-desc">Документация по XGBoost — основному алгоритму градиентного бустинга, применённому для классификации приоритетов заявок. Включает туториалы и API-reference.</div><div class="res-link">xgboost.readthedocs.io →</div></a>
+                <a href="https://shap.readthedocs.io" class="res-card" target="_blank"><div class="res-type">Документация · XAI</div><div class="res-title">SHAP: Explainable AI</div><div class="res-desc">Библиотека для объяснения предсказаний ML-моделей. Используется в проекте для трассировки решений: какие факторы и насколько повлияли на приоритет заявки.</div><div class="res-link">shap.readthedocs.io →</div></a>
+                <a href="https://fastapi.tiangolo.com" class="res-card" target="_blank"><div class="res-type">Документация · Backend</div><div class="res-title">FastAPI Framework</div><div class="res-desc">Современный Python-фреймворк для разработки REST API. Использован для реализации серверной части системы приоритизации с автоматической документацией.</div><div class="res-link">fastapi.tiangolo.com →</div></a>
+            </div>
+            <div class="section-label" style="margin-top:2rem;">Видео-материалы</div>
+            <div class="resources-grid">
+                <div class="res-card" style="padding:0; overflow:hidden; border:none;">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Gv9_4yMHFhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div style="padding:1rem;">
+                        <div class="res-type">Видео · Обучение</div>
+                        <div class="res-title">Machine Learning Tutorial</div>
+                        <div class="res-desc">Введение в машинное обучение для бизнеса и разработки.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <strong>Проект по приоритизации заявок</strong><br>
+    Проект в рамках «Проектной деятельности» · Индустриальный партнёр ООО «МОСИТЛАБ»<br>
+    Куратор: Никулин Ярослав Владимирович · 9 участников
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
