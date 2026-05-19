@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоУправление — Система автономного управления транспортными платформами</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/fira-sans@5.0.20/index.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" onclick="showPage('home')">
+                <i class="ri-robot-2-line"></i> АвтоУправление
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a class="active" onclick="showPage('home')" data-page="home">Главная</a></li>
+                <li><a onclick="showPage('about')" data-page="about">О проекте</a></li>
+                <li><a onclick="showPage('participants')" data-page="participants">Участники</a></li>
+                <li><a onclick="showPage('journal')" data-page="journal">Журнал</a></li>
+                <li><a onclick="showPage('resources')" data-page="resources">Ресурсы</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <div class="page active" id="page-home">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge"><i class="ri-rocket-line"></i> Дисциплина «Проектная деятельность»</div>
+                    <h1>Система обеспечения <span>автономного управления</span> транспортными платформами</h1>
+                    <p>Разработка десктопного ПО и облачных сервисов для удалённого управления автономными транспортными платформами с минимальной задержкой и высоким уровнем безопасности.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('about')"><i class="ri-information-line"></i> О проекте</button>
+                        <button class="btn btn-outline" onclick="showPage('journal')"><i class="ri-article-line"></i> Журнал</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item"><span class="stat-number">10</span><span class="stat-label">Участников</span></div>
+                        <div class="stat-item"><span class="stat-number">&lt;80мс</span><span class="stat-label">Задержка</span></div>
+                        <div class="stat-item"><span class="stat-number">TLS 1.3</span><span class="stat-label">Шифрование</span></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://image.qwenlm.ai/public_source/a0ea9b22-b9a5-4351-a568-cb2bea5d6d45/1d37c7335-2582-4e33-9a46-8c60743dcb19.png" alt="Система управления транспортными платформами">
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="section-header">
+                <h2>Актуальность проекта</h2>
+                <p>Внедрение автономных транспортных решений открывает новые возможности для логистики и промышленности</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon green"><i class="ri-money-dollar-circle-line"></i></div>
+                    <h3>Сокращение расходов</h3>
+                    <p>Значительное снижение затрат на логистические операции за счёт автоматизации управления транспортными платформами.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon blue"><i class="ri-speed-line"></i></div>
+                    <h3>Повышение производительности</h3>
+                    <p>Увеличение эффективности работы специализированной техники благодаря круглосуточному автономному режиму работы.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon orange"><i class="ri-team-line"></i></div>
+                    <h3>Высвобождение кадров</h3>
+                    <p>Освобождение водителей от рутинных задач для внедрения в другие отрасли и решения более сложных производственных задач.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon purple"><i class="ri-shield-check-line"></i></div>
+                    <h3>Безопасность</h3>
+                    <p>Защищённая система авторизации, TLS 1.3 шифрование и постоянный мониторинг состояния платформ.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="page" id="page-about">
+        <section class="about-hero">
+            <h1>О проекте</h1>
+            <p>Подробное описание системы автономного управления транспортными платформами, решаемых проблем и технологического стека</p>
+        </section>
+
+        <div class="about-content">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>🎯 Проблематика</h3>
+                    <p>Существующие решения на рынке имеют ряд критических ограничений, препятствующих массовому внедрению автономных транспортных платформ:</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://image.qwenlm.ai/public_source/a0ea9b22-b9a5-4351-a568-cb2bea5d6d45/1ed2bffd0-2629-44b8-911e-f9869d78cd01.png" alt="Архитектура системы">
+                </div>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <span class="num">01</span>
+                    <h4>Высокая задержка видео</h4>
+                    <p>Высокий уровень задержки при передаче видеоизображения между оператором и платформой.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="num">02</span>
+                    <h4>Закрытые решения</h4>
+                    <p>Отсутствие или низкий уровень имеющихся на рынке решений с открытым исходным кодом.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="num">03</span>
+                    <h4>Ограниченная совместимость</h4>
+                    <p>Текущее оборудование не может быть легко интегрировано с новыми системами и технологиями.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="num">04</span>
+                    <h4>Нет мобильной поддержки</h4>
+                    <p>Многие существующие системы не адаптированы к мобильной среде или работе с облачными сервисами.</p>
+                </div>
+            </div>
+
+            <div class="goals-tasks">
+                <div class="goal-box">
+                    <h3><i class="ri-focus-3-line"></i> Цель проекта</h3>
+                    <p>Создание набора десктопного программного обеспечения и облачных сервисов для удалённого управления автономной транспортной платформой с минимальной задержкой и высокой надёжностью.</p>
+                </div>
+                <div class="task-box">
+                    <h3><i class="ri-list-check-2"></i> Задачи проекта</h3>
+                    <ul>
+                        <li>Реализация серверной и интерфейсной частей системы удалённого управления</li>
+                        <li>Обеспечение защищённой системы авторизации и идентификации транспортных платформ и пульта ДУ</li>
+                        <li>Оптимизация системы трансляции видео для работы между разными сетями</li>
+                        <li>Разработка панели администратора для мониторинга и управления</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="semester-task">
+                <i class="ri-task-line"></i>
+                <div>
+                    <h4>Задача на текущий семестр</h4>
+                    <p>Модифицировать систему трансляции видео, так чтобы она передавала изображения с той же скоростью, но между машиной и клиентом оператора, которые находятся в разных сетях.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 64px;">
+                <div class="diagram-container">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 24px;">Принцип работы системы</h3>
+                    <svg viewBox="0 0 750 280" xmlns="http://www.w3.org/2000/svg" style="max-width: 750px;">
+                        <!-- Operator -->
+                        <rect x="20" y="80" width="140" height="120" rx="14" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+                        <text x="90" y="115" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="700">🖥️ Оператор</text>
+                        <text x="90" y="138" text-anchor="middle" font-size="11" fill="#3b82f6">Десктопное ПО</text>
+                        <text x="90" y="155" text-anchor="middle" font-size="11" fill="#3b82f6">Управление</text>
+                        <text x="90" y="172" text-anchor="middle" font-size="11" fill="#3b82f6">Видео поток</text>
+
+                        <line x1="160" y1="140" x2="230" y2="140" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+                        <!-- Cloud Server -->
+                        <rect x="240" y="60" width="160" height="160" rx="14" fill="#d1fae5" stroke="#0f766e" stroke-width="2"/>
+                        <text x="320" y="100" text-anchor="middle" font-size="13" fill="#042f2e" font-weight="700">☁️ Облако</text>
+                        <text x="320" y="125" text-anchor="middle" font-size="11" fill="#0f766e">API Сервер</text>
+                        <text x="320" y="145" text-anchor="middle" font-size="11" fill="#0f766e">RTMP分发</text>
+                        <text x="320" y="165" text-anchor="middle" font-size="11" fill="#0f766e">Авторизация</text>
+                        <text x="320" y="185" text-anchor="middle" font-size="11" fill="#0f766e">Пулинг</text>
+                        <text x="320" y="205" text-anchor="middle" font-size="11" fill="#0f766e">Мониторинг</text>
+
+                        <line x1="400" y1="140" x2="470" y2="140" stroke="#0f766e" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+                        <!-- Vehicle -->
+                        <rect x="480" y="80" width="140" height="120" rx="14" fill="#ffedd5" stroke="#f97316" stroke-width="2"/>
+                        <text x="550" y="115" text-anchor="middle" font-size="13" fill="#9a3412" font-weight="700">🚗 Платформа</text>
+                        <text x="550" y="138" text-anchor="middle" font-size="11" fill="#f97316">IoT контроллер</text>
+                        <text x="550" y="155" text-anchor="middle" font-size="11" fill="#f97316">H.265 кодировщик</text>
+                        <text x="550" y="172" text-anchor="middle" font-size="11" fill="#f97316">Исполн. мех-мы</text>
+
+                        <defs>
+                            <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/></marker>
+                            <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#0f766e"/></marker>
+                        </defs>
+
+                        <!-- Labels -->
+                        <text x="195" y="130" font-size="10" fill="#475569">HTTPS / WS</text>
+                        <text x="435" y="130" font-size="10" fill="#475569">MQTT / RTMP</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div style="margin-top: 64px;">
+                <div class="section-header"><h2>Интерфейсы системы</h2><p>Эволюция пользовательского интерфейса от начального прототипа до текущей версии</p></div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://image.qwenlm.ai/public_source/a0ea9b22-b9a5-4351-a568-cb2bea5d6d45/1e0356ef6-8d93-4cc7-b45c-4caa4aea3aef.png" alt="Интерфейс управления" style="width:100%; border-radius:10px; margin-bottom:16px;">
+                        <h3>Текущий интерфейс</h3>
+                        <p>Основной интерфейс оператора с видеопотоком, телеметрией и элементами управления. Поддержка низких задержек и адаптивный дизайн.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div style="width:100%; height:200px; background:linear-gradient(135deg,#e0f2fe,#bae6fd); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:3rem;">📐</div>
+                        <h3>Начальный вариант</h3>
+                        <p>Первые прототипы интерфейса с базовыми элементами управления и упрощённой визуализацией данных.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div style="width:100%; height:200px; background:linear-gradient(135deg,#fef3c7,#fde68a); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:3rem;">🧪</div>
+                        <h3>Интерфейс для тестов</h3>
+                        <p>Специализированный интерфейс для отладки и тестирования компонентов системы с расширенной диагностикой.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTICIPANTS -->
+    <div class="page" id="page-participants">
+        <section class="participants-hero">
+            <h1>Участники проекта</h1>
+            <p>Команда из 10 специалистов под руководством М. Д. Маркова и при кураторстве Н. В. Панокина</p>
+        </section>
+
+        <div class="participants-content">
+            <div class="team-photo-section">
+                <img src="https://image.qwenlm.ai/public_source/a0ea9b22-b9a5-4351-a568-cb2bea5d6d45/1f71a9ba3-8797-44c3-9cf6-a7392b376d04.png" alt="Команда проекта АвтоУправление">
+                <p class="team-photo-caption">Рабочая сессия команды — обсуждение архитектуры системы удалённого управления</p>
+            </div>
+
+            <div class="participants-grid">
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">АД</div>
+                        <div class="participant-info"><h3>Дегтярев Артём Александрович</h3><span class="role">Backend-разработчик / Серверная часть</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Разработка серверной части системы, API и механизмов авторизации.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Разработка REST API для управления платформами</li>
+                            <li><i class="ri-check-line"></i> Реализация системы авторизации и идентификации</li>
+                            <li><i class="ri-check-line"></i> Настройка облачных сервисов</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">Python</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">TLS</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">КМ</div>
+                        <div class="participant-info"><h3>Кпадону Мустофа Адисса</h3><span class="role">Frontend-разработчик / UI интерфейсов</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Создание десктопного интерфейса оператора и тестовых панелей.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Разработка десктопного клиента управления</li>
+                            <li><i class="ri-check-line"></i> Создание интерфейса для тестирования</li>
+                            <li><i class="ri-check-line"></i> Оптимизация отрисовки видеопотока</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">C#</span><span class="skill-tag">WPF</span><span class="skill-tag">UI/UX</span><span class="skill-tag">DirectX</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #f97316, #fb923c);">КИ</div>
+                        <div class="participant-info"><h3>Косолапов Иван Романович</h3><span class="role">Инженер видеопотока / RTMP</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Работа с системой передачи видео, кодированием и оптимизацией задержек.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Настройка H.265 кодирования</li>
+                            <li><i class="ri-check-line"></i> Оптимизация RTMP分发 потока</li>
+                            <li><i class="ri-check-line"></i> Тестирование задержек видео</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">FFmpeg</span><span class="skill-tag">RTMP</span><span class="skill-tag">H.265</span><span class="skill-tag">WebRTC</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">КК</div>
+                        <div class="participant-info"><h3>Красовский Константин Владимирович</h3><span class="role">Системный архитектор / Интеграция</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Проектирование архитектуры системы и обеспечение совместимости компонентов.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Проектирование общей архитектуры</li>
+                            <li><i class="ri-check-line"></i> Интеграция оборудования с ПО</li>
+                            <li><i class="ri-check-line"></i> Документирование стандартов</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">Architecture</span><span class="skill-tag">MQTT</span><span class="skill-tag">Docker</span><span class="skill-tag">K8s</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #ec4899, #f472b6);">ЛВ</div>
+                        <div class="participant-info"><h3>Леоненко Владимир Александрович</h3><span class="role">Специалист по безопасности</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Обеспечение защищённости системы, шифрование и контроль доступа.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Внедрение TLS 1.3 шифрования</li>
+                            <li><i class="ri-check-line"></i> Разработка механизма пулинга</li>
+                            <li><i class="ri-check-line"></i> Аудит безопасности системы</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">Security</span><span class="skill-tag">TLS</span><span class="skill-tag">OAuth2</span><span class="skill-tag">PKI</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">ОД</div>
+                        <div class="participant-info"><h3>Ощепков Даниил Юрьевич</h3><span class="role">DevOps-инженер / Развёртывание</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Настройка инфраструктуры, CI/CD и мониторинг развернутых сервисов.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Настройка CI/CD пайплайнов</li>
+                            <li><i class="ri-check-line"></i> Развёртывание облачных сервисов</li>
+                            <li><i class="ri-check-line"></i> Мониторинг и логирование</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">Docker</span><span class="skill-tag">AWS</span><span class="skill-tag">Prometheus</span><span class="skill-tag">Linux</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #84cc16, #a3e635);">ПА</div>
+                        <div class="participant-info"><h3>Парфенов Андрей Дмитриевич</h3><span class="role">Тестировщик / QA-инженер</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Проведение тестирования системы, проверка задержек и стабильности.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Нагрузочное тестирование видеопотока</li>
+                            <li><i class="ri-check-line"></i> Тестирование кросс-сетевых соединений</li>
+                            <li><i class="ri-check-line"></i> Автоматизация тестов</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">QA</span><span class="skill-tag">Selenium</span><span class="skill-tag">JMeter</span><span class="skill-tag">CI</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">ТА</div>
+                        <div class="participant-info"><h3>Тарасов Артем Сергеевич</h3><span class="role">Администратор / Панель управления</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Разработка панели администратора для мониторинга и управления платформами.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Создание админ-панели</li>
+                            <li><i class="ri-check-line"></i> Управление правами доступа</li>
+                            <li><i class="ri-check-line"></i> Система уведомлений</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">Admin</span><span class="skill-tag">RBAC</span><span class="skill-tag">Analytics</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #10b981, #34d399);">ЧТ</div>
+                        <div class="participant-info"><h3>Чистоколов Тимофей Владиславович</h3><span class="role">IoT-инженер / Бортовая электроника</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Работа с бортовым оборудованием транспортных платформ и контроллерами.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Настройка IoT-контроллеров</li>
+                            <li><i class="ri-check-line"></i> Интеграция датчиков и приводов</li>
+                            <li><i class="ri-check-line"></i> Полевые испытания платформ</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">IoT</span><span class="skill-tag">ESP32</span><span class="skill-tag">CAN</span><span class="skill-tag">Embedded</span></div>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <div class="participant-header">
+                        <div class="participant-avatar" style="background: linear-gradient(135deg, #6366f1, #818cf8);">ШМ</div>
+                        <div class="participant-info"><h3>Шевченко Максим Михайлович</h3><span class="role">Аналитик данных / Визуализация</span></div>
+                    </div>
+                    <div class="participant-body">
+                        <p>Анализ телеметрии, визуализация данных и подготовка отчётов.</p>
+                        <ul class="contribution-list">
+                            <li><i class="ri-check-line"></i> Анализ телеметрических данных</li>
+                            <li><i class="ri-check-line"></i> Создание дашбордов аналитики</li>
+                            <li><i class="ri-check-line"></i> Подготовка технической документации</li>
+                        </ul>
+                        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Pandas</span><span class="skill-tag">Grafana</span><span class="skill-tag">SQL</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 64px; text-align: center; padding: 32px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);">
+                <h3 style="font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 16px;">Руководство проекта</h3>
+                <div style="display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;">
+                    <div>
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #0f766e, #14b8a6); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">ММ</div>
+                        <strong style="color: var(--primary-dark);">М. Д. Марков</strong><br>
+                        <span style="color: var(--text-light); font-size: 0.9rem;">Лидер проекта</span>
+                    </div>
+                    <div>
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #60a5fa); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">НП</div>
+                        <strong style="color: var(--primary-dark);">Н. В. Панокин</strong><br>
+                        <span style="color: var(--text-light); font-size: 0.9rem;">Куратор проекта</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JOURNAL -->
+    <div class="page" id="page-journal">
+        <section class="journal-hero">
+            <h1>Журнал проекта</h1>
+            <p>Хроника разработки системы автономного управления транспортными платформами</p>
+        </section>
+
+        <div class="journal-content">
+            <div class="journal-filters">
+                <button class="filter-btn active" onclick="filterJournal('all', this)">Все записи</button>
+                <button class="filter-btn" onclick="filterJournal('progress', this)">Прогресс</button>
+                <button class="filter-btn" onclick="filterJournal('news', this)">Новости</button>
+                <button class="filter-btn" onclick="filterJournal('achievement', this)">Достижения</button>
+            </div>
+
+            <div class="journal-card" data-type="news">
+                <img class="journal-card-image" src="https://image.qwenlm.ai/public_source/a0ea9b22-b9a5-4351-a568-cb2bea5d6d45/1f71a9ba3-8797-44c3-9cf6-a7392b376d04.png" alt="Начало проекта">
+                <div class="journal-card-body">
+                    <div class="journal-meta">
+                        <span class="journal-date"><i class="ri-calendar-line"></i> Сентябрь 2024</span>
+                        <span class="journal-tag news">Новости</span>
+                    </div>
+                    <h3>Старт проекта: формирование команды и определение архитектуры</h3>
+                    <p>Команда из 10 человек приступила к работе над системой автономного управления. Определены ключевые задачи: создание десктопного ПО, облачных сервисов и защищённой системы авторизации. Выбран технологический стек: C# для десктопного клиента, Node.js/Python для сервера, RTMP для видеопотока.</p>
+                    <p>Проведена встреча с куратором Н. В. Панокиным, согласованы технические требования и сроки реализации.</p>
+                    <div class="journal-progress-bar"><div class="journal-progress-fill" style="width: 15%;"></div></div>
+                    <div class="journal-progress-label"><span>Прогресс</span><span>15%</span></div>
+                </div>
+            </div>
+
+            <div class="journal-card" data-type="progress">
+                <div class="journal-card-body">
+                    <div class="journal-meta">
+                        <span class="journal-date"><i class="ri-calendar-line"></i> Ноябрь 2024</span>
+                        <span class="journal-tag progress">Прогресс</span>
+                    </div>
+                    <h3>Разработка системы передачи видео и принципа пулинга</h3>
+                    <p>Завершена базовая реализация системы передачи видеоизображения. Настроен H.265 кодек для эффективного сжатия потока. Внедрён принцип пулинга для безопасной проверки состояния подключения между оператором и платформой.</p>
+                    <p>Созданы три версии интерфейса: начальный прототип, текущий рабочий вариант и специализированный интерфейс для тестирования. Админ-панель позволяет мониторить состояние всех подключённых платформ в реальном времени.</p>
+                    <div class="journal-progress-bar"><div class="journal-progress-fill" style="width: 55%;"></div></div>
+                    <div class="journal-progress-label"><span>Прогресс</span><span>55%</span></div>
+                </div>
+            </div>
+
+            <div class="journal-card" data-type="achievement">
+                <img class="journal-card-image" src="https://image.qwenlm.ai/public_source/a0ea9b22-b9a5-4351-a568-cb2bea5d6d45/1e0356ef6-8d93-4cc7-b45c-4caa4aea3aef.png" alt="Тестирование системы">
+                <div class="journal-card-body">
+                    <div class="journal-meta">
+                        <span class="journal-date"><i class="ri-calendar-line"></i> Январь 2025</span>
+                        <span class="journal-tag achievement">Достижение</span>
+                    </div>
+                    <h3>Успешное тестирование кросс-сетевой передачи видео</h3>
+                    <p>Команда завершила модификацию системы трансляции видео для работы между машиной и клиентом оператора, находящимися в разных сетях. Задержка видеопотока снижена до &lt;80мс при сохранении качества изображения.</p>
+                    <p>Развёрнуты все необходимые облачные сервисы. Система авторизации прошла аудит безопасности. Подготовлена документация и репозиторий проекта для открытого доступа.</p>
+                    <div class="journal-progress-bar"><div class="journal-progress-fill" style="width: 90%;"></div></div>
+                    <div class="journal-progress-label"><span>Прогресс</span><span>90%</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESOURCES -->
+    <div class="page" id="page-resources">
+        <section class="resources-hero">
+            <h1>Ресурсы</h1>
+            <p>Полезные материалы, документация и ссылки, использованные при разработке проекта</p>
+        </section>
+
+        <div class="resources-content">
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <span class="resource-type documentation"><i class="ri-git-repository-line"></i> Репозиторий</span>
+                    <h3>Хранилище проекта</h3>
+                    <p>Исходный код системы, документация API, скрипты развёртывания и инструкции по настройке. Доступен для участников команды и кураторов.</p>
+                    <a href="#" class="resource-link">GitHub Repository <i class="ri-arrow-right-line"></i></a>
+                </div>
+
+                <div class="resource-card">
+                    <span class="resource-type documentation"><i class="ri-book-open-line"></i> Документация</span>
+                    <h3>RTMP & H.265 Specification</h3>
+                    <p>Техническая документация по протоколу RTMP и кодеку H.265, использованная для оптимизации видеопотока и снижения задержек.</p>
+                    <a href="https://www.rfc-editor.org" target="_blank" class="resource-link">RFC Documentation <i class="ri-arrow-right-line"></i></a>
+                </div>
+
+                <div class="resource-card">
+                    <span class="resource-type tool"><i class="ri-tools-line"></i> Инструменты</span>
+                    <h3>Wireshark & FFmpeg</h3>
+                    <p>Основные инструменты для анализа сетевого трафика, отладки видеопотока и тестирования задержек при передаче данных между сетями.</p>
+                    <a href="https://www.wireshark.org" target="_blank" class="resource-link">wireshark.org <i class="ri-arrow-right-line"></i></a>
+                </div>
+
+                <div class="resource-card">
+                    <span class="resource-type article"><i class="ri-article-line"></i> Статья</span>
+                    <h3>Low-Latency Video Streaming for Remote Control</h3>
+                    <p>Исследование методов снижения задержки видеопотока для систем удалённого управления. Послужило основой для архитектуры нашей системы.</p>
+                    <a href="#" class="resource-link">IEEE Xplore <i class="ri-arrow-right-line"></i></a>
+                </div>
+
+                <div class="resource-card">
+                    <span class="resource-type partner"><i class="ri-building-line"></i> Партнёр</span>
+                    <h3>Кафедра автономных систем</h3>
+                    <p>Академическое подразделение, предоставившее лабораторную базу для тестирования транспортных платформ и консультационную поддержку.</p>
+                    <a href="#" class="resource-link">autonomous-lab.edu <i class="ri-arrow-right-line"></i></a>
+                </div>
+
+                <div class="resource-card">
+                    <span class="resource-type tool"><i class="ri-cloud-line"></i> Облако</span>
+                    <h3>AWS IoT Core & EC2</h3>
+                    <p>Облачная инфраструктура для развёртывания серверной части, MQTT-брокера и хостинга облачных сервисов системы управления.</p>
+                    <a href="https://aws.amazon.com/iot" target="_blank" class="resource-link">aws.amazon.com/iot <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+
+            <div style="margin-top: 64px;">
+                <div class="section-header"><h2>Демонстрация системы</h2><p>Видеоматериалы о работе системы удалённого управления</p></div>
+                <div class="video-container" style="max-width: 700px; margin: 0 auto;">
+                    <div class="video-placeholder" onclick="this.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:1.2rem;font-weight:600;\'>🎥 Видеодемонстрация работы системы<br><small style=\'display:block;margin-top:8px;opacity:0.7;\'>Заглушка для встраивания видео</small></div>'">
+                        <i class="ri-play-circle-line"></i>
+                        <span>Нажмите для воспроизведения демонстрации</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 48px; padding: 28px; background: linear-gradient(135deg, rgba(45, 212, 191, 0.08), rgba(15, 118, 110, 0.04)); border-radius: var(--radius); border: 1px solid rgba(45, 212, 191, 0.2); display: flex; align-items: flex-start; gap: 16px;">
+                <i class="ri-information-line" style="font-size: 1.5rem; color: var(--primary); flex-shrink: 0; margin-top: 2px;"></i>
+                <p><strong>Примечание:</strong> Проект разработан в рамках дисциплины «Проектная деятельность». Все материалы и исходный код доступны в репозитории проекта. Для вопросов обращайтесь к лидеру проекта М. Д. Маркову или куратору Н. В. Панокину.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3><i class="ri-robot-2-line"></i> АвтоУправление</h3>
+                <p>Система обеспечения автономного управления транспортными платформами. Проект по дисциплине «Проектная деятельность».</p>
+                <div class="footer-social">
+                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <a href="#"><i class="ri-telegram-fill"></i></a>
+                    <a href="#"><i class="ri-mail-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a onclick="showPage('home')">Главная</a></li>
+                    <li><a onclick="showPage('about')">О проекте</a></li>
+                    <li><a onclick="showPage('participants')">Участники</a></li>
+                    <li><a onclick="showPage('journal')">Журнал</a></li>
+                    <li><a onclick="showPage('resources')">Ресурсы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Технологии</h4>
+                <ul>
+                    <li><a href="#">C# / WPF</a></li>
+                    <li><a href="#">Node.js / Python</a></li>
+                    <li><a href="#">RTMP / H.265</a></li>
+                    <li><a href="#">AWS / Docker</a></li>
+                    <li><a href="#">TLS 1.3</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="mailto:autocontrol@project.ru">autocontrol@project.ru</a></li>
+                    <li><a href="#">GitHub репозиторий</a></li>
+                    <li><a href="#">Telegram канал</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024–2025 АвтоУправление. Лидер: М. Д. Марков | Куратор: Н. В. Панокин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+            var targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) targetPage.classList.add('active');
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) link.classList.add('active');
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            var navLinks = document.getElementById('navLinks');
+            var hamburger = document.getElementById('hamburger');
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+            setTimeout(animateProgressBars, 300);
+        }
+
+        function toggleMenu() {
+            var navLinks = document.getElementById('navLinks');
+            var hamburger = document.getElementById('hamburger');
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        }
+
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            var scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+            if (window.scrollY > 400) scrollTop.classList.add('visible');
+            else scrollTop.classList.remove('visible');
+        });
+
+        function filterJournal(type, btn) {
+            document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            document.querySelectorAll('.journal-card').forEach(function(card) {
+                if (type === 'all' || card.getAttribute('data-type') === type) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.4s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function animateProgressBars() {
+            document.querySelectorAll('.journal-progress-fill').forEach(function(bar) {
+                var width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(function() { bar.style.width = width; }, 100);
+            });
+        }
+
+        var observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideUp 0.6s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.feature-card, .participant-card, .resource-card, .journal-card, .problem-card').forEach(function(el) {
+                el.style.opacity = '0';
+                observer.observe(el);
+            });
+            animateProgressBars();
+        });
+
+        function animateCounters() {
+            document.querySelectorAll('.stat-number').forEach(function(counter) {
+                var text = counter.textContent;
+                if (text.includes('<') || text.includes('.')) return;
+                var target = parseInt(text);
+                if (isNaN(target)) return;
+                var current = 0;
+                var increment = target / 30;
+                var timer = setInterval(function() {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.ceil(current);
+                    }
+                }, 50);
+            });
+        }
+        setTimeout(animateCounters, 500);
+    </script>
+</body>
+</html>
+
