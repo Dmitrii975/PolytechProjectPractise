@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разработка музейно-выставочной экспозиции</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="#" class="nav-logo" onclick="return showPage('home')">
+        Музейный <span>проект</span>
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="#" id="nav-home" class="active" onclick="return showPage('home')">Главная</a></li>
+        <li><a href="#" id="nav-about" onclick="return showPage('about')">О проекте</a></li>
+        <li><a href="#" id="nav-team" onclick="return showPage('team')">Команда</a></li>
+        <li><a href="#" id="nav-journal" onclick="return showPage('journal')">Журнал</a></li>
+        <li><a href="#" id="nav-resources" onclick="return showPage('resources')">Ресурсы</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- ================= HOME ================= -->
+<section id="page-home" class="page active">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Разработка музейно-выставочной экспозиции</h1>
+            <p class="hero-sub">Проект создания музейной системы с цифровыми и физическими экспозициями.</p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" onclick="return showPage('about')">О проекте</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="page-about" class="page">
+
+    <div class="section">
+
+        <div class="section-label">О проекте</div>
+        <div class="section-title">Структура музейной системы</div>
+
+        <p class="section-sub">
+            Проект включает три взаимосвязанных направления экспозиции.
+        </p>
+
+        <div class="split">
+
+            <div class="split-card">
+                <div class="split-title">Основная экспозиция</div>
+                <div class="split-text">
+                    Физическое пространство музея с постоянной коллекцией и витринными зонами.
+                </div>
+            </div>
+
+            <div class="split-card">
+                <div class="split-title">Передвижная экспозиция</div>
+                <div class="split-text">
+                    Выездные выставки и временные экспозиционные решения.
+                </div>
+            </div>
+
+            <div class="split-card">
+                <div class="split-title">Виртуальный музей</div>
+                <div class="split-text">
+                    Онлайн-экспозиция и цифровые 3D-тур решения.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="page-team" class="page">
+
+    <div class="section">
+
+        <div class="section-label">Команда</div>
+        <div class="section-title">Распределение участников</div>
+
+        <p class="section-sub">
+            Команда разделена по направлениям музейной системы.
+        </p>
+
+        <div class="split">
+
+            <div class="split-card">
+                <div class="split-title">Виртуальный музей</div>
+                <div class="split-list">
+                    Тонковидова Василиса<br>
+                    Окуньков Максим<br>
+                    Юнусов Юлдаш<br>
+                    Атабаева Айгул<br>
+                    Архаров Денис
+                </div>
+            </div>
+
+            <div class="split-card">
+                <div class="split-title">Основная экспозиция</div>
+                <div class="split-list">
+                    Чинтхя Наталин<br>
+                    Кузнецова Валерия<br>
+                    Валиахметова Алина<br>
+                    Жукова Екатерина<br>
+                    Теркун Михаил<br>
+                    Мольков Егор
+                </div>
+            </div>
+
+            <div class="split-card">
+                <div class="split-title">Передвижная экспозиция</div>
+                <div class="split-list">
+                    Папка Злата<br>
+                    Шамсиддин Махмудов<br>
+                    Пономарева Мария<br>
+                    Панфилов Сергей<br>
+                    Петровский Михаил
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
