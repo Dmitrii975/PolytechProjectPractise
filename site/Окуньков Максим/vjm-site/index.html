@@ -4,139 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Разработка музейно-выставочной экспозиции</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-<nav>
-    <a href="#" class="nav-logo" onclick="return showPage('home')">
-        Музейный <span>проект</span>
-    </a>
-
-    <ul class="nav-links">
-        <li><a href="#" id="nav-home" class="active" onclick="return showPage('home')">Главная</a></li>
-        <li><a href="#" id="nav-about" onclick="return showPage('about')">О проекте</a></li>
-        <li><a href="#" id="nav-team" onclick="return showPage('team')">Команда</a></li>
-        <li><a href="#" id="nav-journal" onclick="return showPage('journal')">Журнал</a></li>
-        <li><a href="#" id="nav-resources" onclick="return showPage('resources')">Ресурсы</a></li>
-    </ul>
-</nav>
-
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a class="brand" href="#home">Музейный проект</a>
+        <nav class="nav">
+            <a href="#home">Главная</a>
+            <a href="#about">О проекте</a>
+            <a href="#team">Команда</a>
+            <a href="#journal">Журнал</a>
+            <a href="#resources">Ресурсы</a>
+        </nav>
+    </div>
+</header>
 <main>
-
-<!-- ================= HOME ================= -->
-<section id="page-home" class="page active">
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Разработка музейно-выставочной экспозиции</h1>
-            <p class="hero-sub">Проект создания музейной системы с цифровыми и физическими экспозициями.</p>
-
-            <div class="hero-buttons">
-                <a href="#" class="btn btn-primary" onclick="return showPage('about')">О проекте</a>
-            </div>
+<section id="home" class="hero">
+    <div class="container hero-panel">
+        <span class="eyebrow">Современная музейная экспозиция</span>
+        <h1>Цифровой музей и выставочные решения для нового поколения</h1>
+        <p>Создание системы, объединяющей физические витрины, передвижную экспозицию и виртуальный музей в едином формате.</p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="#about">Подробнее</a>
+            <a class="btn btn-secondary" href="#team">Команда</a>
         </div>
     </div>
 </section>
-
-<!-- ================= ABOUT ================= -->
-<section id="page-about" class="page">
-
-    <div class="section">
-
-        <div class="section-label">О проекте</div>
-        <div class="section-title">Структура музейной системы</div>
-
-        <p class="section-sub">
-            Проект включает три взаимосвязанных направления экспозиции.
-        </p>
-
-        <div class="split">
-
-            <div class="split-card">
-                <div class="split-title">Основная экспозиция</div>
-                <div class="split-text">
-                    Физическое пространство музея с постоянной коллекцией и витринными зонами.
-                </div>
-            </div>
-
-            <div class="split-card">
-                <div class="split-title">Передвижная экспозиция</div>
-                <div class="split-text">
-                    Выездные выставки и временные экспозиционные решения.
-                </div>
-            </div>
-
-            <div class="split-card">
-                <div class="split-title">Виртуальный музей</div>
-                <div class="split-text">
-                    Онлайн-экспозиция и цифровые 3D-тур решения.
-                </div>
-            </div>
-
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label">О проекте</span>
+            <h2 class="section-title">Структура музейной системы</h2>
+            <p class="section-text">Проект объединяет три взаимосвязанных направления экспозиции для посетителей и онлайн-аудитории.</p>
         </div>
-
-    </div>
-
-</section>
-
-<!-- ================= TEAM ================= -->
-<section id="page-team" class="page">
-
-    <div class="section">
-
-        <div class="section-label">Команда</div>
-        <div class="section-title">Распределение участников</div>
-
-        <p class="section-sub">
-            Команда разделена по направлениям музейной системы.
-        </p>
-
-        <div class="split">
-
-            <div class="split-card">
-                <div class="split-title">Виртуальный музей</div>
-                <div class="split-list">
-                    Тонковидова Василиса<br>
-                    Окуньков Максим<br>
-                    Юнусов Юлдаш<br>
-                    Атабаева Айгул<br>
-                    Архаров Денис
-                </div>
-            </div>
-
-            <div class="split-card">
-                <div class="split-title">Основная экспозиция</div>
-                <div class="split-list">
-                    Чинтхя Наталин<br>
-                    Кузнецова Валерия<br>
-                    Валиахметова Алина<br>
-                    Жукова Екатерина<br>
-                    Теркун Михаил<br>
-                    Мольков Егор
-                </div>
-            </div>
-
-            <div class="split-card">
-                <div class="split-title">Передвижная экспозиция</div>
-                <div class="split-list">
-                    Папка Злата<br>
-                    Шамсиддин Махмудов<br>
-                    Пономарева Мария<br>
-                    Панфилов Сергей<br>
-                    Петровский Михаил
-                </div>
-            </div>
-
+        <div class="grid grid-3">
+            <article class="card">
+                <h3>Основная экспозиция</h3>
+                <p>Физическое пространство музея с постоянной коллекцией, интерактивными витринами и зонами для посетителей.</p>
+            </article>
+            <article class="card">
+                <h3>Передвижная экспозиция</h3>
+                <p>Мобильные выставки и временные решения, адаптированные к городским площадкам и культурным событиям.</p>
+            </article>
+            <article class="card">
+                <h3>Виртуальный музей</h3>
+                <p>Онлайн-экспозиции, мультимедийные туры и цифровые форматы для удаленных посетителей.</p>
+            </article>
         </div>
-
     </div>
-
 </section>
-
+<section id="team" class="section section-alt">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label">Команда</span>
+            <h2 class="section-title">Распределение участников</h2>
+            <p class="section-text">Команда распределена по направлениям для эффективной работы над каждой частью проекта.</p>
+        </div>
+        <div class="grid grid-3">
+            <article class="card">
+                <h3>Виртуальный музей</h3>
+                <p>Тонковидова Василиса<br>Окуньков Максим<br>Юнусов Юлдаш<br>Атабаева Айгул<br>Архаров Денис</p>
+            </article>
+            <article class="card">
+                <h3>Основная экспозиция</h3>
+                <p>Чинтхя Наталин<br>Кузнецова Валерия<br>Валиахметова Алина<br>Жукова Екатерина<br>Теркун Михаил<br>Мольков Егор</p>
+            </article>
+            <article class="card">
+                <h3>Передвижная экспозиция</h3>
+                <p>Папка Злата<br>Шамсиддин Махмудов<br>Пономарева Мария<br>Панфилов Сергей<br>Петровский Михаил</p>
+            </article>
+        </div>
+    </div>
+</section>
+<section id="journal" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label">Журнал</span>
+            <h2 class="section-title">Что происходит в проекте</h2>
+            <p class="section-text">Короткие заметки о ходе разработки, исследованиях и подготовке материалов для экспозиции.</p>
+        </div>
+        <div class="grid grid-3">
+            <article class="card">
+                <h3>Исследование аудитории</h3>
+                <p>Анализ потребностей посетителей и форматов подачи экспонатов для разных возрастных групп.</p>
+            </article>
+            <article class="card">
+                <h3>Дизайн выставки</h3>
+                <p>Разработка концепции визуального оформления и маршрутов внутри постоянной экспозиции.</p>
+            </article>
+            <article class="card">
+                <h3>Виртуальный опыт</h3>
+                <p>Создание интерактивной онлайн-версии музея с удобной навигацией и медиаконтентом.</p>
+            </article>
+        </div>
+    </div>
+</section>
+<section id="resources" class="section section-alt">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label">Ресурсы</span>
+            <h2 class="section-title">Инструменты и материалы</h2>
+            <p class="section-text">Набор ресурсов, которые помогают реализовать и поддерживать проект на каждом этапе.</p>
+        </div>
+        <div class="grid grid-2">
+            <article class="card">
+                <h3>Материалы</h3>
+                <ul>
+                    <li>Концепция экспозиции</li>
+                    <li>Исследование посетителей</li>
+                    <li>Мультимедийный контент</li>
+                </ul>
+            </article>
+            <article class="card">
+                <h3>Технологии</h3>
+                <ul>
+                    <li>Цифровой 3D-тур</li>
+                    <li>Интерактивные решения</li>
+                    <li>Оптимизация для web</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
 </main>
-
-<script src="js/main.js"></script>
-
 </body>
 </html>
